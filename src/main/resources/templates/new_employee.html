@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add New Employee</title>
+    <link th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1> Employee Management System </h1>
+    <hr>
+    <h2> Save Employee </h2>
+
+<!--    <form th:action="@{/saveEmployee}" th:object="${employee}" method="post" name="emp_form">-->
+
+<!--        <input type="text" th:field="*{firstName}"-->
+<!--               placeholder="Employee First Name" class="form-control mb-4 col-4">-->
+
+<!--        <input type="text" th:field="*{lastName}"-->
+<!--               placeholder="Employee Last Name" class="form-control mb-4 col-4">-->
+
+<!--        <input type="email" th:field="*{email}"-->
+<!--               placeholder="Employee Email" class="form-control mb-4 col-4">-->
+
+<!--        <button type="submit" class="btn btn-info col-2">Save Employee</button>-->
+<!--    </form>-->
+
+    <form th:action="@{/saveEmployee}" th:object="${employee}" method="post" name="emp_form">
+
+        <input type="text" 
+               placeholder="Employee First Name" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{lastName}"
+               placeholder="Employee Last Name" class="form-control mb-4 col-4">
+
+        <input type="email" th:field="*{email}"
+               placeholder="Employee Email" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2">Save Employee</button>
+    </form>
+
+</div>
+
+<script th:src="@{/webjars/jquery/3.5.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/1.14.3/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.4.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
